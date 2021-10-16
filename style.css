@@ -1,3 +1,62 @@
 html {
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+/*LANDING IMAGE*/
+
+li {
+    display: inline-flex;
+    list-style-type: none;
+    font-family: "Roboto";
+    font-size: 0.5rem;
+}
+
+.hero {
     font-family: "Merriweather";
+    color: #FFFFFF;
+    display: flex;
+    line-height: 0.25rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(images/ethan-medrano-yrGn-av5WF8-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 12rem;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-family: "Merriweather";
+    margin: 0.3rem;
+}
+
+.hero h3 {
+    display: flex;
+    flex-direction: column;
+}
+
+/*NAVBAR*/
+
+.navigation {
+    height: auto;
+    width: auto;
+}
+
+.list-links {
+    display: flex;
+    width: auto;
+    height: 3rem;
+    background-color: #7975DA;
+    align-items: center;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin: 0.8rem;
+    font-size: 0.75rem;
 }
