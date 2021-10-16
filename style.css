@@ -1,6 +1,7 @@
 html {
     font-family: "Roboto";
     font-size: 16px;
+    width: auto;
 }
 
 /*LANDING IMAGE*/
@@ -40,10 +41,6 @@ li {
 
 /*NAVBAR*/
 
-.navigation {
-    height: auto;
-    width: auto;
-}
 
 .list-links {
     display: flex;
@@ -60,3 +57,95 @@ li {
     margin: 0.8rem;
     font-size: 0.75rem;
 }
+
+@media only screen and (max-width: 350px) {
+    .list-links {
+        justify-content: space-around;
+    }
+    .hero {
+        height: 10rem;
+    }
+    .link {
+        font-size: 0.75rem;
+        margin-right: 0.25rem;
+        margin-left: -2.5rem;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .list-links {
+        justify-content: space-between;
+    }
+    .hero {
+        height: 20rem;
+    }
+    .link {
+        font-size: 1.5rem;
+        margin-right: 3rem
+    }
+}
+
+
+/*MAIN BODY*/
+
+.mission {
+    display: inline-flex;
+    max-width: 100%;
+    flex-direction: row-reverse;
+    font-family: "Merriweather";
+    font-size: 0.75rem;
+}
+
+.what {
+    display: inline-flex;
+    max-width: 100%;
+    font-family: "Merriweather";
+    font-size: 0.75rem;
+}
+
+.seminar, .crowd {
+    max-width: 50%;
+    height: auto;
+    margin: 2rem;
+}
+
+.mission-statement {
+    text-align: right;
+}
+
+.mission-statement p, .what-we-do p {
+    font-family: "Roboto";
+}
+
+.instruction a{
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 350px) {
+    .mission h1, .what h1 {
+        font-size: 0.75rem;
+        margin-top: 2rem;
+    }
+    .mission-statement p, .what-we-do p {
+        font-size: 0.5rem;
+    }
+    .instruction {
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .mission h1, .what h1 {
+        font-size: 3rem;
+    }
+    .mission-statement p, .what-we-do p {
+        font-size: 2rem;
+    }
+    .instruction {
+        font-size: 2rem;
+    }
+}
+
+/*FOOTER*/
+
+
