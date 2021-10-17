@@ -1,13 +1,12 @@
 html {
+    box-sizing: border-box;
     font-family: "Roboto";
     font-size: 16px;
-    width: auto;
 }
 
 /*LANDING IMAGE*/
 
 li {
-    display: inline-flex;
     list-style-type: none;
     font-family: "Roboto";
     font-size: 0.5rem;
@@ -27,6 +26,7 @@ li {
     background-size: cover;
     background-position: center;
     height: 12rem;
+    width: 100%;
 }
 .hero h1 {
     font-size: 3rem;
@@ -39,113 +39,220 @@ li {
     flex-direction: column;
 }
 
-/*NAVBAR*/
 
+/*NAVBAR*/
 
 .list-links {
     display: flex;
+    justify-content: center;
     width: auto;
     height: 3rem;
     background-color: #7975DA;
     align-items: center;
     margin: 0;
+    padding: 0;
 }
 
 .link {
+    justify-content: center;
     text-decoration: none;
     color: #FFFFFF;
     margin: 0.8rem;
     font-size: 0.75rem;
 }
 
-@media only screen and (max-width: 350px) {
-    .list-links {
-        justify-content: space-around;
-    }
-    .hero {
-        height: 10rem;
-    }
+@media only screen and (min-width: 1000px) {
     .link {
-        font-size: 0.75rem;
-        margin-right: 0.25rem;
-        margin-left: -2.5rem;
-    }
-}
-
-@media only screen and (min-width: 601px) {
-    .list-links {
-        justify-content: space-between;
+        font-size: 1.75rem;
+        justify-content: center;
+        padding: 5rem;
     }
     .hero {
         height: 20rem;
     }
-    .link {
-        font-size: 1.5rem;
-        margin-right: 3rem
+    .hero h1 {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero h3 {
+        font-size: 2rem;
+        margin: 3rem;
     }
 }
 
 
 /*MAIN BODY*/
 
+.section {
+    display: flex;
+}
+
 .mission {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
-    flex-direction: row-reverse;
     font-family: "Merriweather";
-    font-size: 0.75rem;
 }
 
 .what {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
     font-family: "Merriweather";
-    font-size: 0.75rem;
 }
 
 .seminar, .crowd {
-    max-width: 50%;
-    height: auto;
-    margin: 2rem;
+    max-width: 75%;
+    max-height: auto;
+    margin: 2rem auto;
 }
 
-.mission-statement {
-    text-align: right;
+.mission-statement, .what-we-do, .instruction {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 75%;
+    margin: auto;
+    text-align: center;
 }
 
 .mission-statement p, .what-we-do p {
     font-family: "Roboto";
+    max-width: 100%;
 }
 
 .instruction a{
     text-decoration: none;
 }
 
-@media only screen and (max-width: 350px) {
-    .mission h1, .what h1 {
+@media only screen and (min-width: 1000px) {
+    .mission {
+        display: inline-flex;
+        max-width: 100%;
+        flex-direction: row-reverse;
+        font-family: "Merriweather";
         font-size: 0.75rem;
-        margin-top: 2rem;
+    }
+    .what {
+        display: inline-flex;
+        max-width: 100%;
+        flex-direction: row;
+        font-family: "Merriweather";
+        font-size: 0.75rem;
+    }
+    .what-we-do {
+        text-align: left;
+    }
+    .seminar, .crowd {
+        max-width: 50%;
+        height: auto;
+        margin: 2rem;
+    }
+    .mission-statement {
+        text-align: right;
     }
     .mission-statement p, .what-we-do p {
-        font-size: 0.5rem;
+        font-family: "Roboto";
+        font-size: 2rem;
     }
-    .instruction {
-        font-size: 0.75rem;
-    }
-}
-
-@media only screen and (min-width: 601px) {
     .mission h1, .what h1 {
         font-size: 3rem;
     }
-    .mission-statement p, .what-we-do p {
-        font-size: 2rem;
-    }
     .instruction {
         font-size: 2rem;
+        max-width: 50%;
+    }
+    .instruction a{
+        text-decoration: none;
     }
 }
 
+
+/*MEET THE TEAM*/
+
+.team-head {
+    font-family: "Merriweather";
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.team-group img{
+    max-width: 75%;
+    height: auto;
+    margin: 2rem auto 0;
+}
+
+.team-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.team-group p {
+    line-height: 2rem;
+}
+.team-group h3 {
+    font-family: "Merriweather";
+    text-decoration: underline;
+}
+
+.teammate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+@media only screen and (min-width: 700px) {
+    .team-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .teammate {
+        max-width: 33%;
+    }
+}
+
+
 /*FOOTER*/
 
+footer {
+    background-color: #7975DA;
+    color: #FFFFFF;
+    padding: 1rem;
+    margin: 0 0 -1rem 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-bottom: rem;
+    width: 100%;
+}
+
+.credit {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 0.625rem;
+}
+.copy {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 1;
+    font-size: 0.625rem;
+}
+
+@media only screen and (max-width: 350px) {
+    .credit {
+        font-size: 0.5rem;
+    }
+    .copy {
+        font-size: 0.5rem;
+    }
+}
 
